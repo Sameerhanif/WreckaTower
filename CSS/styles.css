@@ -1,0 +1,21 @@
+body {
+    background-color: gray;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.tile {
+    background-color: black;
+    cursor:pointer;
+}
+
+.active {
+    background-color: blue;
+}
+
+.wrapper {
+    display:grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    
+}
