@@ -14,5 +14,19 @@ function GetRandomNumber(min,max){
     console.log(random);
     console.log (min);
     console.log(max);
-    return Math.floor(Math.random() * (max - min + 1) +min );
+    console.log(Math.floor(random));
+    console.log(max-min+1);
+    console.log(Math.floor(random * max - min + 1));
+    return Math.floor(Math.random() * (max - min + 1) + min );
+}
+
+AllTiles.forEach(function(tile){
+    console.log(tile)
+    tile.addEventListener('click',function(){
+        tileclicked(tile);
+    });
+});
+
+function tileclicked(tile){
+console.log(tile);
 }
