@@ -6,10 +6,12 @@ body {
 .tile {
     background-color: black;
     cursor:pointer;
+    
 }
 
 .active {
-    background-image: url(/IMG/090911hubpmprevent_1280x720.jpg);
+    background-image: url(/IMG/_52459665_towers_reuters_224.jpg);
+    background-size: contain;
 }
 
 .wrapper {
@@ -17,5 +19,4 @@ body {
     gap: 10px;
     grid-template-columns: repeat(3,100px);
     grid-template-rows: repeat(3,100px);
-    
 }
