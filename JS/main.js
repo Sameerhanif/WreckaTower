@@ -40,7 +40,6 @@ tile.classList.remove('active');
 PlayerPointsElement.textContent = PlayerPoints;
 }
 
-ActivateRandomTile();
 
 function ActivateRandomTile(){
     const CurrentActiveTile = document.querySelector('.tile.active');
@@ -50,4 +49,15 @@ function ActivateRandomTile(){
     let RandomTileNumber = GetRandomNumber(0,AllTiles.length - 1);
     const SelectedTile = AllTiles[RandomTileNumber];
     SelectedTile.classList.add('active');
+
+    StartGame();
 }
+
+function StartGame(){
+    const RandomTime = GetRandomNumber(MinimumTime,MaximumTime);
+
+    setTimeout(ActivateRandomTile,RandomTime);
+}
+
+StartGame();
+
