@@ -29,4 +29,25 @@ AllTiles.forEach(function(tile){
 
 function tileclicked(tile){
 console.log(tile);
+if(tile.classList.contains('active')){
+    PlayerPoints = PlayerPoints + 1;
+}
+else {
+    PlayerPoints = PlayerPoints -2;
+}
+console.log(PlayerPoints);
+tile.classList.remove('active');
+PlayerPointsElement.textContent = PlayerPoints;
+}
+
+ActivateRandomTile();
+
+function ActivateRandomTile(){
+    const CurrentActiveTile = document.querySelector('.tile.active');
+    if (CurrentActiveTile){
+        CurrentActiveTile.classList.remove('active');
+    }
+    let RandomTileNumber = GetRandomNumber(0,AllTiles.length - 1);
+    const SelectedTile = AllTiles[RandomTileNumber];
+    SelectedTile.classList.add('active');
 }
