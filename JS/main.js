@@ -1,7 +1,7 @@
 const MinimumTime = 500; 
 const MaximumTime= 1250;
-
-let PlayerPoints = 0;
+let missclick = 0;
+let PlayerPoints = 10;
 
 const PlayerPointsElement = document.querySelector(".player-points");
 
@@ -34,7 +34,17 @@ if(tile.classList.contains('active')){
 }
 else {
     PlayerPoints = PlayerPoints -2;
+    missclick = missclick + 1;
 }
+
+if (missclick >=3){
+    alert("hoi")
+}
+
+if (PlayerPoints <0){
+    alert("wtf")
+}
+console.log(missclick)
 console.log(PlayerPoints);
 tile.classList.remove('active');
 PlayerPointsElement.textContent = PlayerPoints;
@@ -62,4 +72,9 @@ function StartGame(){
 StartGame();
 
 
+function difficulty(){
 
+    if (PlayerPoints > 20){
+        
+    }
+}
