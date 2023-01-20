@@ -11,12 +11,12 @@ GetRandomNumber(1,50);
 
 function GetRandomNumber(min,max){
     let random= Math.random();
-    console.log(random);
-    console.log (min);
-    console.log(max);
-    console.log(Math.floor(random));
-    console.log(max-min+1);
-    console.log(Math.floor(random * max - min + 1));
+   // console.log(random);
+   // console.log (min);
+   // console.log(max);
+   // console.log(Math.floor(random));
+   // console.log(max-min+1);
+   // console.log(Math.floor(random * max - min + 1));
     return Math.floor(Math.random() * (max - min + 1) + min );
 }
 
@@ -37,14 +37,16 @@ else {
     missclick = missclick + 1;
 }
 
-if (missclick >=3){
-    alert("hoi")
+if (missclick >= 3){
+    window.location.href = "https://youtu.be/dQw4w9WgXcQ";
+
 }
 
 if (PlayerPoints <0){
-    alert("wtf")
+    window.location.href = "http://127.0.0.1:5500/spel/bomb.html";
 }
-console.log(missclick)
+
+console.log(missclick);
 console.log(PlayerPoints);
 tile.classList.remove('active');
 PlayerPointsElement.textContent = PlayerPoints;
@@ -78,3 +80,4 @@ function difficulty(){
         
     }
 }
+
